@@ -1,31 +1,30 @@
 const RESPOSTA = document.getElementById('resposta')
 
-function calculo(vi, vf, ai, si, sf, tf) {
+const VI = parseInt(document.getElementById('vi').value
+const VF = parseInt(document.getElementById('vf').value
+const AI = parseInt(document.getElementById('ai').value
+const SI = parseInt(document.getElementById('si').value
+const SF = parseInt(document.getElementById('sf').value
+const TF = parseInt(document.getElementById('tf').value
 
-  if ( vf = [ ]){
 
-    RESPOSTA.innerHTML = Math.sqrt(vi * vi + 2 * ai * sf)
+function torriceliVf(vi, ai, si, sf) {
+
+
+
+    return Math.sqrt(vi * vi + 2 * ai * sf)
   }
 
-
-
-
-
-  event.preventDefault();
 }
 
 function calcular(){
 
+if (VF === 5){
+  let resposta = torriceliVf(VI, AI, SI, SF)
+}
 
-  let resposta = calculo(
-    parseInt(document.getElementById('vi').value),
-    parseInt(document.getElementById('vf').value),
-    parseInt(document.getElementById('ai').value),
-
-    parseInt(document.getElementById('si').value),
-    parseInt(document.getElementById('sf').value),
-
-    parseInt(document.getElementById('tf').value)
+    RESPOSTA.innerHTML = resposta
+    event.preventDefault();
 
   );
 
