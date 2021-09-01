@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cálculo de MUV</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+  <body class="container mt-4" style="background-color: #363940;">
+
+      <div class="dropdown col-8 offset-2">
+        <a href="index.html"><button class="btn btn-outline-purple">Menu Principal</button></a>
+        <button class="btn btn-purple dropdown-toggle" type="button" id="dropdownMenuMovimento" data-bs-toggle="dropdown" aria-expanded="false"><em class="h6">Movimento</em> </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuMovimento">
+          <li><a class="dropdown-item active" href="muv.html">Uniformemente Variado</a></li>
+          <li><a class="dropdown-item" href="#">Retilíneo Uniforme</a></li>
+        </ul>
+        <hr style="color: #ededed">
+      </div>
+
+      <div class="card card-body col-6 offset-3" style="background-color: #ededed">
+        <h2 id="texto"> Movimento Uniformemente Variado </h2>
+
+        <form action="#" method="post" onsubmit="calcular()">
+            <label for="vi" class="mt-2 h5">Velocidade Inicial: </label>
+              <input class="form-control"id="vi">
+            <label for="vf" class="mt-2 h5">Velocidade Final:</label>
+              <input class="form-control" id="vf">
+            <label for="ai" class="mt-2 h5">Aceleração:</label>
+              <input class="form-control" id="ai">
+
+              <hr class="mt-4">
+
+            <label for="si" class="h5"> Distância inicial: </label>
+              <input class="form-control" style=";" id="si">
+            <label for="sf" class="mt-2 h5">Distância final:</label>
+              <input class="form-control" id="sf">
+
+            <hr class="mt-4">
+
+            <label for="tf" class="h5"> Tempo: </label>
+              <input class="form-control" id="tf">
+
+            <button onclick="calcular()" type="button" class="btn btn-primary mt-5"> Enviar </button>
+            <h2> Resposta: <strong class="h3" id="resposta"></strong></h3>
+        </form>
+
+
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="js/muvCalculo.js"></script>
+  </body>
+</html>
