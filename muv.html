@@ -11,7 +11,7 @@
   <body class="container mt-4" style="background-color: #363940;">
 
       <div class="dropdown col-8 offset-2">
-        <a href="index.html"><button class="btn btn-outline-purple">Menu Principal</button></a>
+        <a href="index.html"><button class="btn btn-outline-purple"><em class="h6">Menu Principal</em></button></a>
         <button class="btn btn-purple dropdown-toggle" type="button" id="dropdownMenuMovimento" data-bs-toggle="dropdown" aria-expanded="false"><em class="h6">Movimento</em> </button>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuMovimento">
           <li><a class="dropdown-item active" href="muv.html">Uniformemente Variado</a></li>
@@ -23,25 +23,25 @@
       <div class="card card-body col-6 offset-3" style="background-color: #ededed">
         <h2 id="texto"> Movimento Uniformemente Variado </h2>
 
-        <form action="#" method="post" onsubmit="calcular()">
-            <label for="vi" class="mt-2 h5">Velocidade Inicial: </label>
-              <input class="form-control"id="vi">
-            <label for="vf" class="mt-2 h5">Velocidade Final:</label>
-              <input class="form-control" id="vf">
-            <label for="ai" class="mt-2 h5">Aceleração:</label>
-              <input class="form-control" id="ai">
+        <form action="#" method="post" onSubmit="calcular()">
+            <label for="vi" id="vi_label"class="mt-2 h5">Velocidade Inicial: </label>
+              <input class=" form-control"id="vi"> <br>
+            <label for="vf" id="vf_label" class="mt-2 h5">Velocidade Final:</label>
+              <input class="  form-control" id="vf"> <br>
+            <label for="ai" id="ai_label" class="mt-2 h5">Aceleração:</label>
+              <input class="  form-control" id="ai"><br>
 
               <hr class="mt-4">
 
-            <label for="si" class="h5"> Distância inicial: </label>
-              <input class="form-control" style=";" id="si">
-            <label for="sf" class="mt-2 h5">Distância final:</label>
-              <input class="form-control" id="sf">
+            <label for="si" id="si_label" class="h5"> Distância inicial: </label>
+              <input class="  form-control" style=";" id="si"> <br>
+            <label for="sf" id="sf_label" class="mt-2 h5">Distância final:</label>
+              <input class="  form-control" id="sf"> <br>
 
             <hr class="mt-4">
 
-            <label for="tf" class="h5"> Tempo: </label>
-              <input class="form-control" id="tf">
+            <label for="tf" id="tf_label" class="h5"> Tempo: </label>
+              <input class="  form-control" id="tf">
 
             <button onclick="calcular()" type="button" class="btn btn-primary mt-5"> Enviar </button>
             <h2> Resposta: <strong class="h3" id="resposta"></strong></h3>
