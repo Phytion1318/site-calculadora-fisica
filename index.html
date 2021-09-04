@@ -9,13 +9,22 @@
 
   </head>
   <body class="container mt-4" style="background-color: #363940;">
-    <div class="dropdown col-8 offset-2">
+    <div class="col-8 offset-2">
       <a href="index.html"><button class="btn btn-purple"><em class="h6">Menu Principal</em></button></a>
+
       <button class="btn btn-outline-purple dropdown-toggle" type="button" id="dropdownMenuMovimento" data-bs-toggle="dropdown" aria-expanded="false"><em class="h6">Movimento</em> </button>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuMovimento">
-        <li><a class="dropdown-item" href="muv.html">Uniformemente Variado</a></li>
-        <li><a class="dropdown-item" href="#">Retilíneo Uniforme</a></li>
-      </ul>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuMovimento">
+          <li><a class="dropdown-option" href="muv.html">Uniformemente Variado</a></li>
+          <li><a class="dropdown-option" href="#">Retilíneo Uniforme</a></li>
+        </ul>
+
+      <button type="button" class="btn btn-outline-purple dropdown-toggle" id="dropdownMenuConversor" data-bs-toggle="dropdown" aria-expanded="false"><em class="h6"> Conversor </em></button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuConversor">
+          <li><a href="#" class="dropdown-option" data-bs-toggle="modal" data-bs-target="#modal_km_sm">Uniformemente Variado</a></li>
+          <li><a href="#" class="dropdown-option">Em Breve </a></li>
+        </ul>
+
+      <button onclick="conteudo()">teste </button>
       <hr style="color: #ededed">
     </div>
 
@@ -27,5 +36,9 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  </body>
+    <script src="js/muvCalculo.js"></script>
+    <script src="js/muvCalculo2.js"></script>
+    <script src="js/conversor.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/torriceli.js"></script>
 </html>

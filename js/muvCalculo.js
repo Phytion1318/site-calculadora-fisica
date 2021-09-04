@@ -7,26 +7,21 @@ const SI_INPUT = document.getElementById('si')
 const SF_INPUT = document.getElementById('sf')
 const TF_INPUT = document.getElementById('tf')
 
+const VI_LABEL = document.getElementById('vi_label')
+const VF_LABEL = document.getElementById('vf_label')
+const AI_LABEL = document.getElementById('ai_label')
+const SI_LABEL = document.getElementById('si_label')
+const SF_LABEL = document.getElementById('sf_label')
+const TF_LABEL = document.getElementById('tf_label')
 
-
-
-function torriceliVf(vi, ai, si, sf) {
-  return Math.sqrt((vi * vi) + (2 * ai * (sf - si)));
-  };
-
-
-function torriceliSF(vi, vf, ai, si){
-  return (((vf * vf) - (vi * vi)) / (2 * ai)) + si;
-};
-
-function toriceleAI(vi, vf, si, sf){
-  return ((vf * vf) - (vi * vi)) / ((sf - si) * 2)
-}
 
 
 function calcular(){
   event.preventDefault();
 
+  if (isNaN(parseFloat(SI_INPUT.value))){
+    SI_INPUT.value = 0
+  }
 
   let lVI = parseFloat(document.getElementById('vi').value);
   let lVF = parseFloat(document.getElementById('vf').value);
@@ -35,42 +30,53 @@ function calcular(){
   let lSF = parseFloat(document.getElementById('sf').value);
   let lTF = parseFloat(document.getElementById('tf').value);
 
+  let sorvetaoValidacao = true
+
 
   if (isNaN(lVF) && isNaN(lTF)){
-    let resposta = torriceliVf(lVI, lAI, lSI, lSF);
 
-      RESPOSTA.innerHTML = resposta
-      VF_INPUT.value = resposta
+    if (isNaN(parseFloat(VI_INPUT.value))){
+      VI_INPUT.value = 0
+      lVI = parseFloat(document.getElementById('vi').value);
+    }
 
-      document.getElementById('vf_label').classList.add('text-danger')
+   torriceliVf(lVI, lAI, lSI, lSF);
 
-
+      sorvetaoValidacao = false
       event.preventDefault();
   };
 
   if (isNaN(lTF) && isNaN(lSF)) {
-    let resposta = torriceliSF(lVI, lVF, lAI, lSI);
 
-      RESPOSTA.innerHTML = resposta;
-      SF_INPUT.value = resposta
+    if (isNaN(parseFloat(VI_INPUT.value))){
+      VI_INPUT.value = 0
+      lVI = parseFloat(document.getElementById('vi').value);
+    }
 
-      document.getElementById('sf_label').classList.add('text-danger')
+     torriceliSF(lVI, lVF, lAI, lSI);
 
-
+      sorvetaoValidacao = false
       event.preventDefault();
   };
 
   if (isNaN(lTF) && isNaN(lAI)){
-    let resposta = toriceleAI(lVI, lVF, lSI, lSF)
 
-    RESPOSTA.innerHTML = resposta;
-    AI_INPUT.value = resposta;
+    if (isNaN(parseFloat(VI_INPUT.value))){
+      VI_INPUT.value = 0
+      lVI = parseFloat(document.getElementById('vi').value);
+    }
 
-    document.getElementById('ai_label').classList.add('text-danger')
+     toriceliAI(lVI, lVF, lSI, lSF)
 
-
+    sorvetaoValidacao = false
     event.preventDefault();
   };
 
-  
+
+  if (sorvetaoValidacao === true){
+    sorvetao(lVI, lVF, lAI, lSI, lSF, lTF);
+
+
+  }
+
 };

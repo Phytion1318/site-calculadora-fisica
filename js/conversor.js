@@ -1,3 +1,6 @@
+const KM = document.getElementById('km')
+const MS = document.getElementById('ms')
+
 function km_ms(){
   event.preventDefault()
 
@@ -7,16 +10,24 @@ function km_ms(){
   if (isNaN(km)){
     document.getElementById('km').value = ms * 3.6
 
+    MS.classList.remove('form-invalid')
+    KM.classList.remove('form-invalid')
   };
 
   if (isNaN(ms)){
     document.getElementById('ms').value = km / 3.6
+
+    MS.classList.remove('form-invalid')
+    KM.classList.remove('form-invalid')
   };
 
   if (isNaN(ms) && isNaN(km)){
 
-    document.getElementById('ms').classList.add('is-invalid')
-    document.getElementById('km').classList.add('is-invalid')
+    MS.classList.add('form-invalid')
+    KM.classList.add('form-invalid')
+
+    KM.value = 0
+    MS.value = 0
 
   };
 
